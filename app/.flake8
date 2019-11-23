@@ -2,5 +2,5 @@
 exclude 
     migrations,
     __pycache__,
-    manage.py,
-    ./app/settings.py
+    settings.py,
+    manage.py
