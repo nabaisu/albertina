@@ -1,0 +1,52 @@
+{
+    "@context": "https://schema.org/", 
+    "@type": "Recipe", 
+    "name": "Massa para pies",
+    "image": "",
+    "description": "",
+    "keywords": "",
+    "author": {
+      "@type": "Person",
+      "name": "Albertina"
+    },
+    "prepTime": "",
+    "cookTime": "", 
+    "totalTime": "", 
+    "recipeCategory": "appetizer", 
+    "recipeCuisine": "Portuguese", 
+    "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": ""
+    },
+    "recipeIngredient": [
+      "200g de farinha",
+      "1 pitada de sal",
+      "100g de gordura",
+      "Cerca de 7 colheres de chá de água fria"
+    ],
+    "recipeInstructions": [{
+      "@type": "HowToStep",
+      "text": "Peneira-se a farinha com o sal para 1 tigela grande."
+    },{
+      "@type": "HowToStep",
+      "text": "Corta-se a gordura em bocadinhos e junta-se à farinha."
+    },{
+      "@type": "HowToStep",
+      "text": "Com as pontas dos dedos, mistura-se bem a farinha com a gordura, durante 2 - 3 minutos, até ficar com o aspecto da areia."
+    },{
+      "@type": "HowToStep",
+      "text": "Junta-se a água e com 1 faca de ponta redonda, mistura-se bem até a massa começar a ficar pegajosa."
+    },{
+      "@type": "HowToStep",
+      "text": "Trabalha-se bem com a mão, durante alguns segundos, até ficar uniforme e macia."
+    },{
+      "@type": "HowToStep",
+      "text": "Envolve-se em papel manteiga e deixa-se descansar no frigorífico durante cerca de 15 minutos, ou envolve-se em película aderente e leva-se ao frigorífico durante 2 dias."
+    },{
+      "@type": "HowToStep",
+      "text": "Estende-se a massa sobre superfície polvilhada e corta-se segundo a receita."
+    },{
+      "@type": "HowToStep",
+      "text": "Forno regulado no 6 ou no 7 (#traduzir)"
+    }]  
+  }
