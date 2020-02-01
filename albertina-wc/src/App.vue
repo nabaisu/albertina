@@ -21,7 +21,7 @@
     <div v-if="Boolean(chosenRecipe) === false" class="">
       <div class="d-flex flex-wrap flex-row justify-content-center">
 
-      <div v-for="(recipe, i) in recipesData" :key="recipe.name" @click="chosenRecipe = recipesData[i]" class="card my-1" style="cursor:pointer; width:11rem;">
+      <div v-for="(recipe, i) in recipesData" :key="i" @click="chosenRecipe = recipesData[i]" class="card my-1" style="cursor:pointer; width:11rem;">
        
           <img class="card-img-top" :src="recipe.image || imagemAlbertina" style="height: 10rem;" alt="Card image cap" />
           <div class="card-body">
@@ -54,13 +54,13 @@
       <div v-if="chosenRecipe.recipeIngredient.length !== 0">
       <h3>Ingredientes <span class="text-muted">(total: {{chosenRecipe.recipeIngredient.length}})</span></h3>
       <ul>
-      <li v-for="(ingredient, j) in chosenRecipe.recipeIngredient" :key="j">{{ingredient}}</li>
+      <li v-for="(ingredient, j) in chosenRecipe.recipeIngredient" :key="'ing-'+j">{{ingredient}}</li>
       </ul>
       </div>
       <div v-if="chosenRecipe.recipeInstructions.length !== 0">
       <h3>Preparação <span class="text-muted">({{chosenRecipe.recipeInstructions.length}} passos)</span></h3>
       <ul>
-      <li v-for="(step, j) in chosenRecipe.recipeInstructions" :key="j">{{step.text}}</li>
+      <li v-for="(step, j) in chosenRecipe.recipeInstructions" :key="'prep-'+j">{{step.text}}</li>
       </ul>
       </div>
     </div>
