@@ -1,5 +1,6 @@
 <template>
 <div id="albertina-app" class="container-fluid d-flex h-100 flex-column">
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-2kOE+STGAkgemIkUbGtoZ8dJLqfvJ/xzRnimSkQN7viOfwRvWseF7lqcuNXmjwrL" crossorigin="anonymous">
     <nav
       class="navbar navbar-no-padding navbar-fluid navbar-expand-md navbar-light bg-light"
     >
