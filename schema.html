@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            background-color: #fff;
+        }
+        .big-button{
+            
+        }
+        #preview {
+            background-color: #ffe7de;
+        }
+        .f-container {
+            display:flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        pre{
+            white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <!-- 
+        <form action="">
+            <div class="textfield">
+                <label for="frmNameA">Name</label>
+                <input type="text" name="name" id="frmNameA" placeholder="Full name" required autocomplete="name">
+            </div>
+            <div class="textfield">
+                <label for="frmEmailA">Email</label>
+                <input type="email" name="email" id="frmEmailA" placeholder="name@example.com" required
+                    autocomplete="email">
+            </div>
+            <div class="textfield">
+                <label for="frmEmailC">Confirm Email</label>
+                <input type="email" name="emailC" id="frmEmailC" placeholder="name@example.com" required
+                    autocomplete="email">
+            </div>
+            <div class="textfield">
+                <label for="frmPhoneNumA">Phone</label>
+                <input type="tel" name="phone" id="frmPhoneNumA" placeholder="+1-555-555-1212" required
+                    autocomplete="tel">
+            </div>
+            <div class="textfield">
+                <label for="frmNameA">Name</label>
+                <input type="text" name="name" id="frmNameA" placeholder="Full name" required autocomplete="name">
+            </div>
+            <div class="textfield">
+                <label for="frmEmailA">Email</label>
+                <input type="email" name="email" id="frmEmailA" placeholder="name@example.com" required
+                    autocomplete="email">
+            </div>
+            <div class="textfield">
+                <label for="frmEmailC">Confirm Email</label>
+                <input type="email" name="emailC" id="frmEmailC" placeholder="name@example.com" required
+                    autocomplete="email">
+            </div>
+            <div class="textfield">
+                <label for="frmPhoneNumA">Phone</label>
+                <input type="tel" name="phone" id="frmPhoneNumA" placeholder="+1-555-555-1212" required
+                    autocomplete="tel">
+            </div>
+            <button></button>
+        </form>
+         -->
+         <h1>Gerador de receitas para a Albertina</h1>
+        <div class="f-container">
+            <form id="formForText">
+                <input id="fileinput" type="file"  size="60" class="big-button" onchange="this.files[0].text().then(t => parseText(t))">
+            </form>
+            <button size="60" class="big-button" onclick="getSchemaCode()">Get schema code</button>
+        </div>
+        <div class="container">
+            <pre id="preview">
+instruções:
+- tem de ter um word formatado da seguinte maneira:
+título          » espaçados por 2 espaços: primeira linha
+ingrediente     » começado por um número
+autor           » começado por um parêntises
+procedimento    » qualquer outro
+(exemplo:)
+
+MOUSSE DE ATUM
+(Nêta) 
+3 colheres de sopa de cebola picada 
+20 g de margarina,
+4 dl caldo de peixe
+6 folhas de gelatina
+500 g de atum 
+125 g de natas
+1 pouco Cognac, vermute.
+Refoga-se ligeiramente a cebola, na margarina, junta-se o caldo, a gelatina derretida num copo de vinho branco ou vermute, e o atum.
+Mistura-se tudo e bate-se com o triturador.
+Junta-se 3 colheres de sopa de cognac ou Madeira, sal, pimenta e noz moscada.
+Depois de frio, juntam-se 125g de natas batidas, mistura-se e vai para a frigorífico, em forma untada com óleo!
+Desenforma-se e enfeita-se.
+        </pre>
+        </div>
+    </main>
+
+    <script>
+        var baseSchema = {
+            "@context": "https://schema.org/",
+            "@type": "Recipe",
+            "name": "",
+            "image": [], // urls
+            "author": {
+                "@type": "Person",
+                "name": "Albertina"
+            },
+            "datePublished": "", //2018-03-10
+            "description": "", // This coffee cake is awesome and perfect for parties.
+            "prepTime": "", // PT20M
+            "cookTime": "", //PT30M
+            "totalTime": "", // PT50M
+            "keywords": "", // cake for a party, coffee
+            "recipeYield": "", // 10
+            "recipeCategory": "", // Dessert
+            "recipeCuisine": "Portuguese", // American
+            "nutrition": {
+                // "@type": "NutritionInformation",
+                // "calories": "270 calories"
+            },
+            "recipeIngredient": [], // array of strings
+            "recipeInstructions": [ // array of objects
+            //  "@type": "HowToStep",
+            //  "name": "Enjoy",
+            //  "text": "Allow to cool and enjoy.",
+            //  "url": "https://example.com/party-coffee-cake#step6",
+            //  "image": "https://example.com/photos/party-coffee-cake/step6.jpg"
+            ],
+            "aggregateRating": {
+            //  "@type": "AggregateRating",
+            //  "ratingValue": "5",
+            //  "ratingCount": "18"
+            },
+            "video": {
+            //  "@type": "VideoObject",
+            //  "name": "How to make a Party Coffee Cake",
+            //  "description": "This is how you make a Party Coffee Cake.",
+            //  "thumbnailUrl": [
+            //      "https://example.com/photos/1x1/photo.jpg",
+            //      "https://example.com/photos/4x3/photo.jpg",
+            //      "https://example.com/photos/16x9/photo.jpg"
+            //    ],
+            //    "contentUrl": "http://www.example.com/video123.mp4",
+            //    "embedUrl": "http://www.example.com/videoplayer?video=123",
+            //    "uploadDate": "2018-02-05T08:00:00+08:00",
+            //    "duration": "PT1M33S",
+            //    "interactionStatistic": {
+            //        "@type": "InteractionCounter",
+            //        "interactionType": { "@type": "http://schema.org/WatchAction" },
+            //        "userInteractionCount": 2347
+            //    },
+            //    "expires": "2019-02-05T08:00:00+08:00"
+            }
+        }
+        baseSchema.datePublished = new Date().toISOString().split("T")[0]
+        
+        //var clone = Object.assign({}, baseSchema);
+        class Recipe {
+            constructor() {
+                const clone = JSON.parse(JSON.stringify(baseSchema));
+                Object.assign(this, clone);
+            }
+
+        }
+        const fileInput = document.getElementById('fileinput');
+        let pre = document.getElementById('preview')
+        let texta;
+        var listOfRecipes = [];
+        var final = "";
+        let templistOfRecipes = [];
+        function parseText(text) {
+            texta = text;
+            var a = text.split(/([\n])/g);
+            let isFirst = true;
+            let isNew = true;
+            var recipe = new Recipe();
+            recipe.datePublished = new Date().toISOString().split("T")[0]
+            if (isNew) {
+                a.forEach(function (line) {
+                    if (!Boolean(line.match(/([\n])/g))) {
+                        if (line.trim() === "") {
+                            //means it's a new recipe
+                            //save recipe
+                            listOfRecipes.push({...recipe});
+                            // start new recipe
+                            recipe = new Recipe();
+                            recipe.datePublished = new Date().toISOString().split("T")[0]
+                            isNew = true;
+                        } else {
+                            if (isNew) {
+                                recipe.name = line
+                                console.log("[TITLE]", line)
+                                final += "\n[TITLE] "+ line + "\n"
+                                isNew = false;
+                            } else {
+                                switch (true) {
+                                    case Boolean(line.match(/(^[0-9])+/g)):
+                                        //means it's an ingredient
+                                        //console.log("[ingredient]", line)
+                                        recipe.recipeIngredient.push(line);
+                                        final += "[ingredient] "+ line + "\n"
+                                        break;
+                                    case Boolean(line.match(/(^\()+/g)):
+                                        //means it's an author
+                                        recipe.author.name = line.match(/\((.*)\)/).pop();
+                                        //console.log("[author]", line)
+                                        final += "[author] "+ line + "\n"
+                                        break;
+                                    case Boolean(line.match(/(^#)+/g)):
+                                        //means it's a category
+                                        recipe.recipeCategory = line.split("#")[1];
+                                        final += "[category] "+ line.split("#")[1] + "\n"
+                                        break;
+                                    default:
+                                        //means it's an instruction
+                                        //console.log("[how to]", line)
+                                        let instructions = {}
+                                        instructions["@type"] = "HowToStep"
+                                        //instructions["name"] = "HowToStep"
+                                        instructions["text"] = line
+                                        //instructions["url"] = ""
+                                        //instructions["image"] = "HowToStep"
+                                        recipe.recipeInstructions.push({...instructions})
+                                        final += "[how to] "+ line + "\n"
+                                        /*
+                                            "@type": "HowToStep",
+                                            "name": "Enjoy",
+                                            "text": "Allow to cool and enjoy.",
+                                            "url": "https://example.com/party-coffee-cake#step6",
+                                            "image": "https://example.com/photos/party-coffee-cake/step6.jpg"
+                                        */
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                })
+
+            }
+            cleanList()
+            pre.textContent = final;
+        }
+
+        function getSchemaCode() {
+            fileInput.value = "";
+            pre.textContent = JSON.stringify(templistOfRecipes, undefined, 2);
+        }
+        function cleanList(){
+            templistOfRecipes = []
+            listOfRecipes.forEach(function(el, index){
+                if (JSON.stringify(el) != JSON.stringify(baseSchema)){
+                    templistOfRecipes.push(el);
+                }
+            });
+            console.log(templistOfRecipes)
+        }
+
+//fileInput.addEventListener('change', readText(fileInput.files[0]), false);
+
+
+    </script>
+</body>
+
+</html>
