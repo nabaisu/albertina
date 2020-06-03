@@ -8,10 +8,30 @@
     />
     <nav class="navbar navbar-no-padding navbar-fluid navbar-expand-md navbar-light bg-light">
       <div class="container-fluid">
-        <a tabindex="0" aria-label="lista de receitas" style="cursor: pointer;" @click="chosenRecipe = ''" @keyup.enter="chosenRecipe = ''" class="navbar-brand">
+        <a
+          tabindex="0"
+          aria-label="lista de receitas"
+          style="cursor: pointer;"
+          @click="chosenRecipe = ''"
+          @keyup.enter="chosenRecipe = ''"
+          class="navbar-brand"
+        >
           <span class="text-danger font-weight-bold">Lista</span>
         </a>
-        <a tabindex="0" aria-label="página inicial" style="cursor: pointer;" class="navbar-brand" @click="getRandomFrase()" @keyup.enter="getRandomFrase()"><img alt="albertina logo" :src="imagemAlbertina" style="height:2.25rem;" class="d-inline-block mr-3" />
+        <a
+          tabindex="0"
+          aria-label="página inicial"
+          style="cursor: pointer;"
+          class="navbar-brand"
+          @click="getRandomFrase()"
+          @keyup.enter="getRandomFrase()"
+        >
+          <img
+            alt="albertina logo"
+            :src="imagemAlbertina"
+            style="height:2.25rem;"
+            class="d-inline-block mr-3"
+          />
         </a>
         <a
           tabindex="0"
@@ -20,9 +40,8 @@
           class="navbar-brand font-weight-bold"
           @click="getRandomRecipe()"
           @keyup.enter="getRandomRecipe()"
-          
         >
-          <span class="text-warning">Albertina </span>
+          <span class="text-warning">Albertina</span>
           <span class="text-success">Escolhe</span>
         </a>
       </div>
@@ -42,8 +61,10 @@
           @keyup.enter="chosenRecipe = filteredRecipes[i]"
           class="card my-1"
           style="cursor:pointer; width:11rem;"
-           tabindex="0" :aria-label="recipe.name"
-           role="button" aria-pressed="false"
+          tabindex="0"
+          :aria-label="recipe.name"
+          role="button"
+          aria-pressed="false"
         >
           <img
             class="card-img-top"
@@ -124,47 +145,35 @@
           <div class="modal-wrapper">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
-            <button type="button" class="close" tabindex="1" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+                <button
+                  type="button"
+                  class="close"
+                  tabindex="1"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
                 <div class="modal-body text-center">
                   <p v-if="Boolean(chosenSentence) !== false">
                     <span class="h3 font-weight-bold">"{{chosenSentence}}"</span>
                     <br />- Albertina
                   </p>
                   <div v-else>
-                    <p>A Albertina é quem ajuda a minha família desde há muito tempo.A Albertina é quem ajuda a minha família desde há muito tempo.A Albertina é quem ajuda a minha família desde há muito tempo.A Albertina é quem ajuda a minha família desde há muito tempo.</p>
-                    <p>
-                      A Albertina é quem ajuda a minha família desde há muito tempo.
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                    </p>
-                    <p>A Albertina é quem ajuda a minha família desde há muito tempo.</p>
-                    <p>A Albertina é quem ajuda a minha família desde há muito tempo.</p>
-                    <p>A Albertina é quem ajuda a minha família desde há muito tempo.</p>
-                    <p>A Albertina é quem ajuda a minha família desde há muito tempo.</p>
-                    <p>
-                      A Albertina é quem ajuda a minha família desde há muito tempo.
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                    </p>
-                    <p>A Albertina é quem ajuda a minha família desde há muito tempo.</p>
-                    <p>A Albertina é quem ajuda a minha família desde há muito tempo.</p>
-                    <p>A Albertina é quem ajuda a minha família desde há muito tempo.</p>
+                    <img src="@/assets/albertina-imagem.jpg" alt="imagem da albertina, de mim e da minha avó, os 3 tão bonitos" height="500">
+                    <p></p>
+                    <p>Basicamente, a Albertina é a pessoa que trabalha em casa da minha avó.</p>
+                    <p>Mais especificamente, a Albertina é A PESSOA que trabalha em casa da minha avó.</p>
+                    <p>Está há tanto tempo que apanhou o meu pai e a minha tia ainda pequeninos, e ainda hoje vai lá para casa, religiosamente, todos os dias de semana.</p>
+                    <p>Ela vem da terra lá de cima, da Sertã, e vai lá às vezes, mas quase sempre para trabalhar, coisa que foi a única coisa que a vi fazer até agora, e fá-lo muuuuito bem, tão bem que nunca ouvi nenhuma queixa dela, e pelo contrário, toda a gente que nos conhece aos 2 gosta dela e lhe tem muito carinho.</p>
+                    <p>A Albertina é a melhor amiga da minha avó, e apesar da minha avó ter muuuitas amigas, que remontam mesmo aos tempos de liceu, não há nenhuma pessoa que a conheça tão bem quanto a sua amiga que lá passa os dias e aos quais os pequenos detalhes nunca lhe escapam. Desde saber que os exames da minha avó iam sempre quentinhos e que assim ninguém nunca conseguiu encontrar o exame da professora mais cedo, a saber as histórias dos filhos da minha avó, e muito mais que só ela sabe e não consigo escrever porque não sei.</p>
+                    <p>Ela é linda, forte e rija como um pero. Faz as lides todas da casa, mesmo cozinhar, que detesta. Se fosse por ela, bastava fazer uma sopa para a semana toda e comia sopa todos os dias só para não cozinhar. Mas quando se fala de passar a ferro, com um ferro mais velho que ela mesma, aí duvido que alguém seja melhor que ela no mundo, e falo mesmo dos profissionais, porque ela mesmo é uma profissional. Aí a Albertina é das maiores.</p>
+                    <p>Sempre com um sorriso nos olhos mas uma cara séria quando alguém entra na cozinha para invadir o seu espaço, e sempre um olhar contente por nos ver comer, isto porque assiste sempre o que estamos a comer, e se alguém diz alguma coisa que não devia, leva logo com um provérbio antigo ou então um bitaite.</p>
+                    <p>Ah a Albertina, é muita coisa, mas é das melhores pessoas com quem alguma vez me cruzei. E gosto muito dela. Não só fico super contente por ter passado na minha vida, mas por também ter feito parte dela. =)</p>
+                    <p>Este site fiz em homenagem à Albertina, porque apesar das receitas terem sido escritas pela minha avó, foi ela que sempre as cozinhou.</p>
+                    <p>Gosto muito de ti Albertina =)</p>
+                    <p>Sei que não conheces muito bem as novas tecnologias, mas fica a saber que as novas tecnologias te conhecem bem =).</p>
+                    <p>(joao).</p>
                   </div>
                 </div>
               </div>
@@ -174,19 +183,27 @@
       </transition>
     </div>
     <div class="footer text-center my-3">
-      Feito com ❤️ pelo <a href="https://nabaisu.com/?utm_source=albertina&utm_medium=footer-link&utm_campaign=albertina" target="_blank" class="text-success">joao</a> |
+      Feito com ❤️ pelo
       <a
-        target=""
+        href="https://nabaisu.com/?utm_source=albertina&utm_medium=footer-link&utm_campaign=albertina"
+        target="_blank"
+        class="text-success"
+      >joao</a> |
+      <a
+        target
         class="text-warning"
         style="cursor:pointer;"
         @click="showModal=true"
         @keyup.enter="showModal=true"
         tabindex="0"
-      >quem é a Albertina ?</a> | 
-      
-      <a class="text-danger" target="_blank" href="https://www.buymeacoffee.com/nabais">Obrigado joao</a>
+      >quem é a Albertina ?</a>
+ |
+      <a
+        class="text-danger"
+        target="_blank"
+        href="https://www.buymeacoffee.com/nabais"
+      >Obrigado joao</a>
     </div>
-    
   </div>
 </template>
 
@@ -195,23 +212,23 @@ const recipeData = [
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "BOLO DE IOGURTE\r",
-    "image": [],
-    "author": {
+    name: "BOLO DE IOGURTE\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Armanda"
+      name: "Armanda"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "1 iogurte natural\r",
       "3 caixas (do iogurte) de farinha\r",
       "3 caixas (do iogurte) de açúcar\r",
@@ -219,176 +236,186 @@ const recipeData = [
       "3 ονοs \r",
       "1 colher de chá de fermento\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Batem-se as gemas com o açúcar, depois óleo, farinha e fermento e iogurte e for fim as claras en castelo.\r"
+        text:
+          "Batem-se as gemas com o açúcar, depois óleo, farinha e fermento e iogurte e for fim as claras en castelo.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "forma de buraco, untada.\r"
+        text: "forma de buraco, untada.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "CREME DE ABACATE\r",
-    "image": [],
-    "author": {
+    name: "CREME DE ABACATE\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Teresa"
+      name: "Teresa"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "1 abacate,\r",
       "1 sumo de 1 limão, \r",
       "6 conchas (de açucareiro) de açúcar e \r",
       "1 gota de leite,\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Bate tudo com varinha magica, põe no frigorifico e serve, em taça de sobremesa.\r"
+        text:
+          "Bate tudo com varinha magica, põe no frigorifico e serve, em taça de sobremesa.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "BACALHAU À JOÃO DO PIPO\r",
-    "image": [],
-    "author": {
+    name: "BACALHAU À JOÃO DO PIPO\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Tem-se o bacalhau demolhado e escamado e assa- se na grelha, ligeiramente untado, para não pegar.\r"
+        text:
+          "Tem-se o bacalhau demolhado e escamado e assa- se na grelha, ligeiramente untado, para não pegar.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Faz-se uma cebolada com cebola, bastante azeite, alho, salsa, louro, 2 piripiris, 2 colheres de chá de colorau e deixe se a cebola fritar bem, sem esturrar.\r"
+        text:
+          "Faz-se uma cebolada com cebola, bastante azeite, alho, salsa, louro, 2 piripiris, 2 colheres de chá de colorau e deixe se a cebola fritar bem, sem esturrar.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Mete-se o bacalhau nesta cebolada, com 0,5 dl de vinho branco.\r"
+        text: "Mete-se o bacalhau nesta cebolada, com 0,5 dl de vinho branco.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Deixa-se Ferver lentamente e depois apaga-se o lume e deixa-se ficar, quanto mais tempo, melhor.\r"
+        text:
+          "Deixa-se Ferver lentamente e depois apaga-se o lume e deixa-se ficar, quanto mais tempo, melhor.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Na altura de servir pode pôr-se uma colher de maionese por cima do bacalhau.\r"
+        text:
+          "Na altura de servir pode pôr-se uma colher de maionese por cima do bacalhau.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Acompanha batatas cozidas.\r"
+        text: "Acompanha batatas cozidas.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "MASSA PARA FOLHADOS\r",
-    "image": [],
-    "author": {
+    name: "MASSA PARA FOLHADOS\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "250 g de margarina para folhados\r",
       "250 g de farinha\r",
       "1 pitada de sal\r",
       "1 ovo inteiro\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Põe-se a água a aquecer com um bocado de sal. Junta-se à farinha o ovo inteiro, 1 pitada de sal e a água, a pouco e pouco, amassando com a mão até ficar com consistência semelhante à massa tenra.\r"
+        text:
+          "Põe-se a água a aquecer com um bocado de sal. Junta-se à farinha o ovo inteiro, 1 pitada de sal e a água, a pouco e pouco, amassando com a mão até ficar com consistência semelhante à massa tenra.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Põe-se farinha na tábua e amassa-se novamente, batendo com a massa. Põe-se farinha no rolo e estende-se por igual, em todas as direções, formando um rectângulo grande.\r"
+        text:
+          "Põe-se farinha na tábua e amassa-se novamente, batendo com a massa. Põe-se farinha no rolo e estende-se por igual, em todas as direções, formando um rectângulo grande.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Parte-se a margarina en 6 bocados iguais.\r"
+        text: "Parte-se a margarina en 6 bocados iguais.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Barra-se com um dos bocados a massa toda e dobra-se depois a massa em 3 no sentido do comprimento e depois no da largura.\r"
+        text:
+          "Barra-se com um dos bocados a massa toda e dobra-se depois a massa em 3 no sentido do comprimento e depois no da largura.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Estende-se novamente com o rolo, barra-se outra vez e embrulha-se do mesmo modo.\r"
+        text:
+          "Estende-se novamente com o rolo, barra-se outra vez e embrulha-se do mesmo modo.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "E assim sucessivamente as 6 vezes.\r"
+        text: "E assim sucessivamente as 6 vezes.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "TROUXAS COM CHOURIÇO \r",
-    "image": [],
-    "author": {
+    name: "TROUXAS COM CHOURIÇO \r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "250 g de farinha \r",
       "30 g de fermento do padeiro\r",
       "1 dl de leite \r",
@@ -397,568 +424,610 @@ const recipeData = [
       "1 ovo inteiro\r",
       "1 colher de chá de sal fino\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Desmancha-se o fermento e mistura-se com todos os ingredientes, amassando bem.\r"
+        text:
+          "Desmancha-se o fermento e mistura-se com todos os ingredientes, amassando bem.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Estende-se com o rolo e formam-se pequenas trouxas com chouriço dentro.\r"
+        text:
+          "Estende-se com o rolo e formam-se pequenas trouxas com chouriço dentro.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Pintam-se com ovo e deixam-se descansar meia hora, indo em seguida a correr em forno quente.\r"
+        text:
+          "Pintam-se com ovo e deixam-se descansar meia hora, indo em seguida a correr em forno quente.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "BACALHAU COM CREME E HORTALIÇA\r",
-    "image": [],
-    "author": {
+    name: "BACALHAU COM CREME E HORTALIÇA\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Coze-se bacalhau, hortaliça que se quiser (couves, etc), batatas e ovos. No fim de cozida a hortaliça tempera-se com azeite e vinagre. O bacalhau é lascado e os ovos às rodelas.\r"
+        text:
+          "Coze-se bacalhau, hortaliça que se quiser (couves, etc), batatas e ovos. No fim de cozida a hortaliça tempera-se com azeite e vinagre. O bacalhau é lascado e os ovos às rodelas.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Frita-se bastante cebola às rodelas, en bas. tante azeite, e no fundo do tabuleiro põe-se uma camada de cebola com azeite.\r"
+        text:
+          "Frita-se bastante cebola às rodelas, en bas. tante azeite, e no fundo do tabuleiro põe-se uma camada de cebola com azeite.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Tem-se feito um creme com leite, farinha e gemas e vão-se alternando camadas de bacalhau, camadas de hortaliça, creme, cebola e assim sucessivamente. A última camada deve ser de creme\r"
+        text:
+          "Tem-se feito um creme com leite, farinha e gemas e vão-se alternando camadas de bacalhau, camadas de hortaliça, creme, cebola e assim sucessivamente. A última camada deve ser de creme\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Vai ao homo para cozer tudo mais um bocadinho e serve-se no mesmo tabuleiro.\r"
+        text:
+          "Vai ao homo para cozer tudo mais um bocadinho e serve-se no mesmo tabuleiro.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "COGUMELOS DE CHITA\r",
-    "image": [],
-    "author": {
+    name: "COGUMELOS DE CHITA\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Coze-se um ovo por pessoa faz-se um corte nos ovos e tira-se a gema com cuidado.\r"
+        text:
+          "Coze-se um ovo por pessoa faz-se um corte nos ovos e tira-se a gema com cuidado.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Entretanto, contam-se os tomates ao meio, pelam-se e pintam-se-lhe manchinhas com o molho, depois.\r"
+        text:
+          "Entretanto, contam-se os tomates ao meio, pelam-se e pintam-se-lhe manchinhas com o molho, depois.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Faz-se um molho branco ao qual se juntam as gemas, bocadinhos de atum, pickles, feijão verde, azeitonas, sal e pimenta. Recheiam-se as claras com este creme, tapam-se com os tomates e põe-se numa travessa, atapetada de alface cortada miudinha.\r"
+        text:
+          "Faz-se um molho branco ao qual se juntam as gemas, bocadinhos de atum, pickles, feijão verde, azeitonas, sal e pimenta. Recheiam-se as claras com este creme, tapam-se com os tomates e põe-se numa travessa, atapetada de alface cortada miudinha.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "RISSÓIS\r",
-    "image": [],
-    "author": {
+    name: "RISSÓIS\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "1 chávena de água,\r",
       "1 chávena de leite,\r",
       "1 colher de margarina, sal, pimenta\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "l casca de limão. \r"
+        text: "l casca de limão. \r"
       },
       {
         "@type": "HowToStep",
-        "text": "Deixa-se ferver.\r"
+        text: "Deixa-se ferver.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Juntam-se 2 chávenas de farinha, todas de uma vez, e bate-se bem.\r"
+        text:
+          "Juntam-se 2 chávenas de farinha, todas de uma vez, e bate-se bem.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "SALMÃO FINGIDO\r",
-    "image": [],
-    "author": {
+    name: "SALMÃO FINGIDO\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Eloysa"
+      name: "Eloysa"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Corta-se o peixe em cru (garoupa ou peixe rijo) em bocados pequeninos. Tempera-se bem com vinho branco, alho, sal e pimenta.\r"
+        text:
+          "Corta-se o peixe em cru (garoupa ou peixe rijo) em bocados pequeninos. Tempera-se bem com vinho branco, alho, sal e pimenta.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "À parte põe-se um pouco de azeite (para uma garoupa de 1kg, 1dl de azeite) numa caçarola, 1 dente de alho cortado ao meio e vai ao lume. Quando o alho estiver louro tira-se e deita-se polme de tomate ou tomate de conserva (1 colher de concentrado ou 2 tomates bem maduros). Deixa-se ferver e engrossar.\r"
+        text:
+          "À parte põe-se um pouco de azeite (para uma garoupa de 1kg, 1dl de azeite) numa caçarola, 1 dente de alho cortado ao meio e vai ao lume. Quando o alho estiver louro tira-se e deita-se polme de tomate ou tomate de conserva (1 colher de concentrado ou 2 tomates bem maduros). Deixa-se ferver e engrossar.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Deita-se o peixe lá para dentro, tapa-se e deixa-se cozer\r"
+        text: "Deita-se o peixe lá para dentro, tapa-se e deixa-se cozer\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Quando estiver cozido, retira-se do lume deixa-se arrefecer e juntam-se 2 ou 3 ovos inteiros, batidos.\r"
+        text:
+          "Quando estiver cozido, retira-se do lume deixa-se arrefecer e juntam-se 2 ou 3 ovos inteiros, batidos.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Põe-se numa forma em feitio de peixe, untado de banha e farinha e vai ao forno.\r"
+        text:
+          "Põe-se numa forma em feitio de peixe, untado de banha e farinha e vai ao forno.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Cobre-se com molho maionese serve-se com salada russa.\r"
+        text: "Cobre-se com molho maionese serve-se com salada russa.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "PASTELÃO DE FIAMBRE\r",
-    "image": [],
-    "author": {
+    name: "PASTELÃO DE FIAMBRE\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "1 kg de batatas, \r",
       "250 g de fiambre, \r",
       "120 g de teifa, \r",
       "60g de farinha, \r",
       "6 ovos, sal, pimenta.\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Cozem-se as batatas com casca e depois passam-se. Junta-se a manteiga, mais ou meno derretida, sal, pimenta, as gemas, o fiambre picado, a farinha e, por último as claras em castelo.\r"
+        text:
+          "Cozem-se as batatas com casca e depois passam-se. Junta-se a manteiga, mais ou meno derretida, sal, pimenta, as gemas, o fiambre picado, a farinha e, por último as claras em castelo.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Vai ao forno e depois pode barrar-se com molho bechamel.\r"
+        text: "Vai ao forno e depois pode barrar-se com molho bechamel.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "BACALHAU DOURADO\r",
-    "image": [],
-    "author": {
+    name: "BACALHAU DOURADO\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Corta-se a cebola às rodas fininhas e refoga-se até ficar loura.\r"
+        text:
+          "Corta-se a cebola às rodas fininhas e refoga-se até ficar loura.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Tem-se o bacalhau desfiado (não precisa ser demolhado) que se passe por água e deita-se no refogado para refogar também.\r"
+        text:
+          "Tem-se o bacalhau desfiado (não precisa ser demolhado) que se passe por água e deita-se no refogado para refogar também.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Fritam-se batatas aos palitos finos e, na hora de ir para a mesa, juntam-se os ovos.\r"
+        text:
+          "Fritam-se batatas aos palitos finos e, na hora de ir para a mesa, juntam-se os ovos.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "FILETES NO FORNO\r",
-    "image": [],
-    "author": {
+    name: "FILETES NO FORNO\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "D. M. Luisa"
+      name: "D. M. Luisa"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Cortam-se os filetes grossos ou pescada as postas e deixam- se estar um bocado só temperados com sal.\r"
+        text:
+          "Cortam-se os filetes grossos ou pescada as postas e deixam- se estar um bocado só temperados com sal.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Cobre-se e fundo de um pyrex com azeite, cebola às rodas fininhas, vinho branco e um dente de alho, se se quiser.\r"
+        text:
+          "Cobre-se e fundo de um pyrex com azeite, cebola às rodas fininhas, vinho branco e um dente de alho, se se quiser.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Na altura de pôr ao lume, tira-se o sal que possa estar a mais no peixe, cobre-se cada filete de pão ralado e 2 ou 3 ervilhinhas de manteiga.\r"
+        text:
+          "Na altura de pôr ao lume, tira-se o sal que possa estar a mais no peixe, cobre-se cada filete de pão ralado e 2 ou 3 ervilhinhas de manteiga.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Vai ao forno e vai-se refogando com próprio molho, para o pão ralado não secar.\r"
+        text:
+          "Vai ao forno e vai-se refogando com próprio molho, para o pão ralado não secar.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Serve-se com puré de batata\r"
+        text: "Serve-se com puré de batata\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "POLVO COM MAIONESE \r",
-    "image": [],
-    "author": {
+    name: "POLVO COM MAIONESE \r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "TV"
+      name: "TV"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Junta-se a 300 g de arroz crioulo (cozido em bastante água e passado depois for água fria) 3 colheres de sopa de azeite, sumo de 1 limão, sal, pimenta e bastante salsa picada (a colher bem cheia).\r"
+        text:
+          "Junta-se a 300 g de arroz crioulo (cozido em bastante água e passado depois for água fria) 3 colheres de sopa de azeite, sumo de 1 limão, sal, pimenta e bastante salsa picada (a colher bem cheia).\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Cozem-se os polvos em pouca água, com cebola, cerca de 20 minutos (quando a cebola estiver cozida o polvo também está).\r"
+        text:
+          "Cozem-se os polvos em pouca água, com cebola, cerca de 20 minutos (quando a cebola estiver cozida o polvo também está).\r"
       },
       {
         "@type": "HowToStep",
-        "text": "O polvo tem-se primeiro em água e depois tira-se-lhe a pele.\r"
+        text: "O polvo tem-se primeiro em água e depois tira-se-lhe a pele.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Guarda-se a coroa de tentáculos de um polvo pequeno (200 g) para guarnecer, depois de cozido. O resto (cerca de 500g) parte-se aos bocadinhos pequenos.\r"
+        text:
+          "Guarda-se a coroa de tentáculos de um polvo pequeno (200 g) para guarnecer, depois de cozido. O resto (cerca de 500g) parte-se aos bocadinhos pequenos.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Faz-se uma maionese com 2 gemas e 2dl de óleo. Junta-se 1kg de berbigão e o polvo.\r"
+        text:
+          "Faz-se uma maionese com 2 gemas e 2dl de óleo. Junta-se 1kg de berbigão e o polvo.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Põe-se no meio de um prato redondo, cobre-se com rodelas de ovo cozido (2) e depois com o arroz. Coloca-se o polvo, aberto, por cima e entre os tentáculos, umas gambas.\r"
+        text:
+          "Põe-se no meio de um prato redondo, cobre-se com rodelas de ovo cozido (2) e depois com o arroz. Coloca-se o polvo, aberto, por cima e entre os tentáculos, umas gambas.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "BACALHAU COM WHISKY E CARIL\r",
-    "image": [],
-    "author": {
+    name: "BACALHAU COM WHISKY E CARIL\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Celeste"
+      name: "Celeste"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Faz-se um refogado com bastante cebola, óleo e margarina, sem queimar, mas bem louro. Junta-se 1kg de tomate, 1 colher de chá de caril, 1/2 copo de vinho de whisky e deixa-se apurar bem. Passa-se pelo passe-vite.\r"
+        text:
+          "Faz-se um refogado com bastante cebola, óleo e margarina, sem queimar, mas bem louro. Junta-se 1kg de tomate, 1 colher de chá de caril, 1/2 copo de vinho de whisky e deixa-se apurar bem. Passa-se pelo passe-vite.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Junta-se 250g de natas e 1l de molho branco, grosso, e queijo ralado.\r"
+        text:
+          "Junta-se 250g de natas e 1l de molho branco, grosso, e queijo ralado.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Lasca-se o bacalhau cozido e junta-se no molho.\r"
+        text: "Lasca-se o bacalhau cozido e junta-se no molho.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Vai ao forno a gratinar.\r"
+        text: "Vai ao forno a gratinar.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "TARTE DE CEBOLA\r",
-    "image": [],
-    "author": {
+    name: "TARTE DE CEBOLA\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Nêta"
+      name: "Nêta"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "1 Massa de tarte\r",
       "1 kg de cebola para uma tarte grande.\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Corta-se a cebola às rodelas fininhas, vai a fritar com margarina e óleo, em lume brando, pelo menos 1⁄2 hora, até a cebola ficar dourada, mas não queimada.\r"
+        text:
+          "Corta-se a cebola às rodelas fininhas, vai a fritar com margarina e óleo, em lume brando, pelo menos 1⁄2 hora, até a cebola ficar dourada, mas não queimada.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Misturam-se 2 ovos inteiros, batidos, 50 g queijo ralado, 125 g de natas e sal, pimenta e noz moscada q.b.\r"
+        text:
+          "Misturam-se 2 ovos inteiros, batidos, 50 g queijo ralado, 125 g de natas e sal, pimenta e noz moscada q.b.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Sobre a massa de tarte meio cozida, deita-se o recheio e sobre este nozinhas de manteiga e queijo ralado e vai ao forno a gratinar.\r"
+        text:
+          "Sobre a massa de tarte meio cozida, deita-se o recheio e sobre este nozinhas de manteiga e queijo ralado e vai ao forno a gratinar.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "LULAS NO FORNO\r",
-    "image": [],
-    "author": {
+    name: "LULAS NO FORNO\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Celeste"
+      name: "Celeste"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Arranjam-se as lulas e cortam-se às rodas e cabeças.\r"
+        text: "Arranjam-se as lulas e cortam-se às rodas e cabeças.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Pica-se uma cebola bem picada e refoga-se com um pouco de azeite, até ficar lourinha.\r"
+        text:
+          "Pica-se uma cebola bem picada e refoga-se com um pouco de azeite, até ficar lourinha.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Põem-se as lulas lá dentro (sem tempero), um pouco de salsa, tapa-se e deixa-se cozer. (Se for preciso, junta-se uma pinguinha de água).\r"
+        text:
+          "Põem-se as lulas lá dentro (sem tempero), um pouco de salsa, tapa-se e deixa-se cozer. (Se for preciso, junta-se uma pinguinha de água).\r"
       },
       {
         "@type": "HowToStep",
-        "text": "À parte faz-se molho de tomate, temperado com caldo knorr de galinha, 1 colher de chá de açúcar e pimenta.\r"
+        text:
+          "À parte faz-se molho de tomate, temperado com caldo knorr de galinha, 1 colher de chá de açúcar e pimenta.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Noutro tacho faz-se molho branco, bastante grosso, temperado com sal, pimenta, savora, sumo de limão e junta-se o molho de tomate e as lulas. Rectificar o tempero. Vai ao forno e acompanha com arroz branco, seco, enfeitado com salsa picada.\r"
+        text:
+          "Noutro tacho faz-se molho branco, bastante grosso, temperado com sal, pimenta, savora, sumo de limão e junta-se o molho de tomate e as lulas. Rectificar o tempero. Vai ao forno e acompanha com arroz branco, seco, enfeitado com salsa picada.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "PESCADA COM CARIL \r",
-    "image": [],
-    "author": {
+    name: "PESCADA COM CARIL \r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Celeste"
+      name: "Celeste"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Compram-se filetes tempera-se com sal, pimenta, limão e deixam-se ficar umas horas.\r"
+        text:
+          "Compram-se filetes tempera-se com sal, pimenta, limão e deixam-se ficar umas horas.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Arranjam-se alguns camarões.\r"
+        text: "Arranjam-se alguns camarões.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Molho:\r"
+        text: "Molho:\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Refoga-se um bocado, numa porção boa de cebola. Junta-se tomate, 4 ou 5 maçãs (reinetas) descascadas e partidas, alho, uma folha de louro, um ramo de salsa e piripiri.\r"
+        text:
+          "Refoga-se um bocado, numa porção boa de cebola. Junta-se tomate, 4 ou 5 maçãs (reinetas) descascadas e partidas, alho, uma folha de louro, um ramo de salsa e piripiri.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Deixa-se apurar e depois junta-se 2 colheres de sobremesa de caril e deixa-se refogar mais um bocado. Passa-se pelo passe-vite ou bate-se com a varinha.\r"
+        text:
+          "Deixa-se apurar e depois junta-se 2 colheres de sobremesa de caril e deixa-se refogar mais um bocado. Passa-se pelo passe-vite ou bate-se com a varinha.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Faz-se um bocado de molho bechamel ralo e junta-se tudo, de modo a dar para tapar os filetes.\r"
+        text:
+          "Faz-se um bocado de molho bechamel ralo e junta-se tudo, de modo a dar para tapar os filetes.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Os filetes são fritos em óleo, sem passar por nada. \r"
+        text: "Os filetes são fritos em óleo, sem passar por nada. \r"
       },
       {
         "@type": "HowToStep",
-        "text": "Põem-se os filetes num pyrex, os camarões por cima e depois cobre-se com o molho e vai ao forno.\r"
+        text:
+          "Põem-se os filetes num pyrex, os camarões por cima e depois cobre-se com o molho e vai ao forno.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Acompanha com arroz branco, solto.\r"
+        text: "Acompanha com arroz branco, solto.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "MOUSSE DE ATUM\r",
-    "image": [],
-    "author": {
+    name: "MOUSSE DE ATUM\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Nêta"
+      name: "Nêta"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "3 colheres de sopa de cebola picada \r",
       "20 g de margarina,\r",
       "4 dl caldo de peixe\r",
@@ -967,147 +1036,157 @@ const recipeData = [
       "125 g de natas\r",
       "1 pouco Cognac, vermute.\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Refoga-se ligeiramente a cebola, na margarina, junta-se o caldo, a gelatina derretida num copo de vinho branco ou vermute, e o atum.\r"
+        text:
+          "Refoga-se ligeiramente a cebola, na margarina, junta-se o caldo, a gelatina derretida num copo de vinho branco ou vermute, e o atum.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Mistura-se tudo e bate-se com o triturador.\r"
+        text: "Mistura-se tudo e bate-se com o triturador.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Junta-se 3 colheres de sopa de cognac ou Madeira, sal, pimenta e noz moscada.\r"
+        text:
+          "Junta-se 3 colheres de sopa de cognac ou Madeira, sal, pimenta e noz moscada.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Depois de frio, juntam-se 125g de natas batidas, mistura-se e vai para a frigorífico, em forma untada com óleo!\r"
+        text:
+          "Depois de frio, juntam-se 125g de natas batidas, mistura-se e vai para a frigorífico, em forma untada com óleo!\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Desenforma-se e enfeita-se.\r"
+        text: "Desenforma-se e enfeita-se.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "ATUM COM MASSA\r",
-    "image": [],
-    "author": {
+    name: "ATUM COM MASSA\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Nêta"
+      name: "Nêta"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Coze-se a massa (búzios, cotovelos ou espirais), escorre-se e passa-se por água fria.\r"
+        text:
+          "Coze-se a massa (búzios, cotovelos ou espirais), escorre-se e passa-se por água fria.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Cozem-se ervilhas.\r"
+        text: "Cozem-se ervilhas.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Põe-se nam pyrex, alternadamente, massa, envilhas, atum lascado.\r"
+        text:
+          "Põe-se nam pyrex, alternadamente, massa, envilhas, atum lascado.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Pica-se uma cebola e frita-se levemente em margarina (2 colheres). Juntam-se 2 colheres de farinha, mexe-se e junta-se leite, fora do lume, aos poucos, para fazer uma espécie de bechamel. Mistura-se depois uma lata de sopa de cogumelos ou sopa de pacote, desfeita num copo de água. Vai ao lume a cozer.\r"
+        text:
+          "Pica-se uma cebola e frita-se levemente em margarina (2 colheres). Juntam-se 2 colheres de farinha, mexe-se e junta-se leite, fora do lume, aos poucos, para fazer uma espécie de bechamel. Mistura-se depois uma lata de sopa de cogumelos ou sopa de pacote, desfeita num copo de água. Vai ao lume a cozer.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Deita-se por cima da massa no tabuleiro de pyrex.\r"
+        text: "Deita-se por cima da massa no tabuleiro de pyrex.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Põe-se pão ralado por cima, com bocadinhos de margarina e vai ao forno.\r"
+        text:
+          "Põe-se pão ralado por cima, com bocadinhos de margarina e vai ao forno.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "ROLO DE FIAMBRE\r",
-    "image": [],
-    "author": {
+    name: "ROLO DE FIAMBRE\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Nêta"
+      name: "Nêta"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "1 kg carne de porco\r",
       "0,5 kg de fiambre\r",
       "1 chávena e meia de leite \r",
       "2 ovos \r",
       "1 chavena de cream crackers ralados (12)\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Passam-se as carnes pela máquina (en cru), junta-se tudo, tempera-se com sal e pimenta e faz-se um rolo, apertando bem.\r"
+        text:
+          "Passam-se as carnes pela máquina (en cru), junta-se tudo, tempera-se com sal e pimenta e faz-se um rolo, apertando bem.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Vai ao forno em tabuleiro untado, e põe-se por cima pão ralado e nozinhas de margarina.\r"
+        text:
+          "Vai ao forno em tabuleiro untado, e põe-se por cima pão ralado e nozinhas de margarina.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Borrifa-se, de vez em quando com vermute seco.\r"
+        text: "Borrifa-se, de vez em quando com vermute seco.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Fica muito bem acompanhado do seguinte molho de mostarda: (link para o molho de mostarda)\r"
+        text:
+          "Fica muito bem acompanhado do seguinte molho de mostarda: (link para o molho de mostarda)\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "MOLHO DE MOSTARDA EM PUDIM \r",
-    "image": [],
-    "author": {
+    name: "MOLHO DE MOSTARDA EM PUDIM \r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "4 ovos\r",
       "3/4 chávena de açúcar\r",
       "1 envelope de gelatina em pó (3 colheres de chá rasas)\r",
@@ -1117,92 +1196,97 @@ const recipeData = [
       "1/2 chávena de vinagre de cidra \r",
       "1/2 chávena de natas.\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "É feito em banho-maria.\r"
+        text: "É feito em banho-maria.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Batem-se os ovos. Junta-se a água e o vinagre (se não houver de cidra, outro bastante forte) aos ovos e depois a mistura do pós (açúcar, gelatina, mostarda e sal) que lá devem estar misturados.\r"
+        text:
+          "Batem-se os ovos. Junta-se a água e o vinagre (se não houver de cidra, outro bastante forte) aos ovos e depois a mistura do pós (açúcar, gelatina, mostarda e sal) que lá devem estar misturados.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Continua-se a cozinhar (em banho-maria) até engrossar.\r"
+        text: "Continua-se a cozinhar (em banho-maria) até engrossar.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Deixa-se arrefecer e juntam-se as natas batidas. Deita-se numa forma e vai para o frigorífico.\r"
+        text:
+          "Deixa-se arrefecer e juntam-se as natas batidas. Deita-se numa forma e vai para o frigorífico.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Desenforma para servir.\r"
+        text: "Desenforma para servir.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "FRANGO COM COGUMELOS\r",
-    "image": [],
-    "author": {
+    name: "FRANGO COM COGUMELOS\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Natividade"
+      name: "Natividade"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "1 frango, \r",
       "1 lata de 90 g de cogumelos e \r",
       "125 g de natas,\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Parte-se o frango em cru, tempera-se com sal e margarina (um bocado bom) e leva-se as lume baixinho, tapado.\r"
+        text:
+          "Parte-se o frango em cru, tempera-se com sal e margarina (um bocado bom) e leva-se as lume baixinho, tapado.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Tira-se, depois de cozido, e junta-se os cogumelos e vai a ferver um bocadinho (não muito).\r"
+        text:
+          "Tira-se, depois de cozido, e junta-se os cogumelos e vai a ferver um bocadinho (não muito).\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Quando estiver para ir para a mesa, juntam-se as natas e volta a ferver mais uns dois minutos.\r"
+        text:
+          "Quando estiver para ir para a mesa, juntam-se as natas e volta a ferver mais uns dois minutos.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "BACALHAU COM NATAS E CARIL\r",
-    "image": [],
-    "author": {
+    name: "BACALHAU COM NATAS E CARIL\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "2 postas de bacalhau cozido\r",
       "1 colher de sopa de margarina\r",
       "1 cebola picada\r",
@@ -1216,371 +1300,395 @@ const recipeData = [
       "2 colheres de sopa de maizena\r",
       "150 g de natas\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Com o leite, 2 colheres de maizena e a margarina, faz-se um bechamel grosso.\r"
+        text:
+          "Com o leite, 2 colheres de maizena e a margarina, faz-se um bechamel grosso.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Aloira-se muito a cebola em margarina e o alho.\r"
+        text: "Aloira-se muito a cebola em margarina e o alho.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Deita-se para dentro o bacalhau às lascas e deixa-se refogar. Depois vai para dentro do bechamel, junta-se a mostanda, caril, as batatas fritas, o queiro e as natas e o ovo cozido aos bocadinhos.\r"
+        text:
+          "Deita-se para dentro o bacalhau às lascas e deixa-se refogar. Depois vai para dentro do bechamel, junta-se a mostanda, caril, as batatas fritas, o queiro e as natas e o ovo cozido aos bocadinhos.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Tempera-se de sal, pimenta e limão e vai ao forno num pyrex polvilhado com pão ralado.\r"
+        text:
+          "Tempera-se de sal, pimenta e limão e vai ao forno num pyrex polvilhado com pão ralado.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "EMPADAS\r",
-    "image": [],
-    "author": {
+    name: "EMPADAS\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "250 g de farinha\r",
       "125 g de margarina\r",
       "1 forminho de água \r",
       "1 ovo inteiro\r",
       "1 pitada de sal\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Amassa-se tudo pouco, tendem-se finas, formam-se as latinhas e conta-se uma tampa redonda para cima.\r"
+        text:
+          "Amassa-se tudo pouco, tendem-se finas, formam-se as latinhas e conta-se uma tampa redonda para cima.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Põe-se o recheio que se quiser e vai ao forno.\r"
+        text: "Põe-se o recheio que se quiser e vai ao forno.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "BACALHAU ESPIRITUAL\r",
-    "image": [],
-    "author": {
+    name: "BACALHAU ESPIRITUAL\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "1 pão de forma dos grandes\r",
       "3 postas de bacalhau cozido\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "molho branco bem temperado (1/2 l de leite, 4 colh. farinha)\r"
+        text: "molho branco bem temperado (1/2 l de leite, 4 colh. farinha)\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Parte-se o pão às fatias e molha-se bem no leite. Espreme-se entre as maos e forra-se bem num pyrex (fundo e lados)\r"
+        text:
+          "Parte-se o pão às fatias e molha-se bem no leite. Espreme-se entre as maos e forra-se bem num pyrex (fundo e lados)\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Poe-se nas lume, a cozer em bastante azeite, uma porção boa de cebola picade e um pouco de alho. Depois de bem cozida, deita-se o bacalhau esfarelado grosso.\r"
+        text:
+          "Poe-se nas lume, a cozer em bastante azeite, uma porção boa de cebola picade e um pouco de alho. Depois de bem cozida, deita-se o bacalhau esfarelado grosso.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Ferve bem na cebola, deita-se un pouco de molho branco para ligar bem e tempera-se com bastante limão e pimenta.\r"
+        text:
+          "Ferve bem na cebola, deita-se un pouco de molho branco para ligar bem e tempera-se com bastante limão e pimenta.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Poe-se depois por cima do pão uma camada deste bacalhau, apertando bem para ligar à camada de baixo!\r"
+        text:
+          "Poe-se depois por cima do pão uma camada deste bacalhau, apertando bem para ligar à camada de baixo!\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Tem-se um bocado de molho de tomate bem temperado e aperta-se tambem, fazendo buracos para deixar introduzir na camada anterior e ligar bem. Outra vez molho branco. E outra vez pão embebido em leite, bacalhau, tomate e molho branco, com que acaba.\r"
+        text:
+          "Tem-se um bocado de molho de tomate bem temperado e aperta-se tambem, fazendo buracos para deixar introduzir na camada anterior e ligar bem. Outra vez molho branco. E outra vez pão embebido em leite, bacalhau, tomate e molho branco, com que acaba.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Aperta-se bem e fazem-se buracos com garfo para o molho entrar e ligar bem.\r"
+        text:
+          "Aperta-se bem e fazem-se buracos com garfo para o molho entrar e ligar bem.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Deve-se esperar umas horas antes de ir para o forno\r"
+        text: "Deve-se esperar umas horas antes de ir para o forno\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Na altura de ir para o forno, põe-se pão ralado.\r"
+        text: "Na altura de ir para o forno, põe-se pão ralado.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "COROA DE PADRE\r",
-    "image": [],
-    "author": {
+    name: "COROA DE PADRE\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Cozem-se batatas com bacalhau e passam-se pelo passe-vite. Deita-se um bocado de manteiga e leite para fazer uma papa, nem grossa nem fina e juntam-se umas gemas de ovo (4).\r"
+        text:
+          "Cozem-se batatas com bacalhau e passam-se pelo passe-vite. Deita-se um bocado de manteiga e leite para fazer uma papa, nem grossa nem fina e juntam-se umas gemas de ovo (4).\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Põe-se num prato pyrex, à roda, deixando una cavidade no meio, que se enche com molho branco.\r"
+        text:
+          "Põe-se num prato pyrex, à roda, deixando una cavidade no meio, que se enche com molho branco.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Batem-se as claras en castelo e põem-se à volta.\r"
+        text: "Batem-se as claras en castelo e põem-se à volta.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Vai ao forno a alourar.\r"
+        text: "Vai ao forno a alourar.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "CALDEIRADA DE CABRITO \r",
-    "image": [],
-    "author": {
+    name: "CALDEIRADA DE CABRITO \r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Laura"
+      name: "Laura"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Corta-se a cabrito aos bocados, tempera-se com alho, sal, colorau, louro, pimenta e vinho branco. Deixa-se estar assim um bocado.\r"
+        text:
+          "Corta-se a cabrito aos bocados, tempera-se com alho, sal, colorau, louro, pimenta e vinho branco. Deixa-se estar assim um bocado.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Se o cabrito não for tenro, deixa-se cozer, neste tempero, um bocadinho (não muito).\r"
+        text:
+          "Se o cabrito não for tenro, deixa-se cozer, neste tempero, um bocadinho (não muito).\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Poe-se depois no fundo de uma panela (pode ser de pressão, com a grelha) bastante cebola as rodas, uma camada de carne, por cima uma camada de batatas às rodas grossas, uma camada de cebola, e assim sucessivamente. Deita-se o resto do molho dentro, um bocadinho de azeite, um bocadinho de banha de porco e um bocadinho de margarina e um ramo de salsa.\r"
+        text:
+          "Poe-se depois no fundo de uma panela (pode ser de pressão, com a grelha) bastante cebola as rodas, uma camada de carne, por cima uma camada de batatas às rodas grossas, uma camada de cebola, e assim sucessivamente. Deita-se o resto do molho dentro, um bocadinho de azeite, um bocadinho de banha de porco e um bocadinho de margarina e um ramo de salsa.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Se houver pimentos, poem-se umas tirinhas e tomate en bocados ou passado. Não esquecer o jindungo! Poe-se no fundo, partido ou gotas.\r"
+        text:
+          "Se houver pimentos, poem-se umas tirinhas e tomate en bocados ou passado. Não esquecer o jindungo! Poe-se no fundo, partido ou gotas.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Não leva água.\r"
+        text: "Não leva água.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Se o cabrito for tenro, pode-se por tudo em cru.\r"
+        text: "Se o cabrito for tenro, pode-se por tudo em cru.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Deixa-se ferver cerca de 10 minutos na panela de pressão e depois de apagado, mais um bocado. Se preciso, deixa-se apurar!\r"
+        text:
+          "Deixa-se ferver cerca de 10 minutos na panela de pressão e depois de apagado, mais um bocado. Se preciso, deixa-se apurar!\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Não se mexe.\r"
+        text: "Não se mexe.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "FRANGO FRITO\r",
-    "image": [],
-    "author": {
+    name: "FRANGO FRITO\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Laura"
+      name: "Laura"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Arranja-se um franguinho bom, que se trita inteiro, dentro de um tacho com bastante azeite, até ficar bem lourinho.\r"
+        text:
+          "Arranja-se um franguinho bom, que se trita inteiro, dentro de um tacho com bastante azeite, até ficar bem lourinho.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Tira-se um bocado de azeite. Pica-se uma cebolinha, um dente de alho, uma folha de louro, um bocadinho de colorau, pimenta e jindungo e deixa-se refogar no azeite que ficou, tendo tirado primeiro o frango.\r"
+        text:
+          "Tira-se um bocado de azeite. Pica-se uma cebolinha, um dente de alho, uma folha de louro, um bocadinho de colorau, pimenta e jindungo e deixa-se refogar no azeite que ficou, tendo tirado primeiro o frango.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Quando está tudo apuradinho, corta-se uma cebola às rodas e deixa-se refogar até ficar morta. Junta-se então o frango, poe-se-lhe água que dê para cozer un chouriço inteiro e uma farinheira, batatas partidas ao meio e deixa de server, dando uma fervura ao frango e chourico, antes de meter as batatas.\r"
+        text:
+          "Quando está tudo apuradinho, corta-se uma cebola às rodas e deixa-se refogar até ficar morta. Junta-se então o frango, poe-se-lhe água que dê para cozer un chouriço inteiro e uma farinheira, batatas partidas ao meio e deixa de server, dando uma fervura ao frango e chourico, antes de meter as batatas.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Coze tapado.\r"
+        text: "Coze tapado.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Quando está quase pronto põe-se uma colher de sopa de vinagre e tapa-se outra vez.\r"
+        text:
+          "Quando está quase pronto põe-se uma colher de sopa de vinagre e tapa-se outra vez.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "FILETES DE ESPADA\r",
-    "image": [],
-    "author": {
+    name: "FILETES DE ESPADA\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Num pyrex, põe-se margarina a barrar e por cima cebola picada, previamente frita em azeite, rodelas de tomate sem pele nem grainhas e depois os filetes temperados com sal e pimenta.\r"
+        text:
+          "Num pyrex, põe-se margarina a barrar e por cima cebola picada, previamente frita em azeite, rodelas de tomate sem pele nem grainhas e depois os filetes temperados com sal e pimenta.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Por cima dos filetes, nova camada de cebola, tomate, queijo ralado na altura (ou às lascas, pequenas) e natas a cobrir.\r"
+        text:
+          "Por cima dos filetes, nova camada de cebola, tomate, queijo ralado na altura (ou às lascas, pequenas) e natas a cobrir.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Vai ao forno a cozer até alourar.\r"
+        text: "Vai ao forno a cozer até alourar.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "QUICHE DE ESPINAFRES \r",
-    "image": [],
-    "author": {
+    name: "QUICHE DE ESPINAFRES \r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Celeste"
+      name: "Celeste"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Alho francês alourado en margarina.\r"
+        text: "Alho francês alourado en margarina.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Espinafres cozidos e escorridos.\r"
+        text: "Espinafres cozidos e escorridos.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Por cima, creme feito com 0,5 l de leite, 1 pacote de natas, 3 ovos + 2 gemas.\r"
+        text:
+          "Por cima, creme feito com 0,5 l de leite, 1 pacote de natas, 3 ovos + 2 gemas.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Vai ao forno a alourar.\r"
+        text: "Vai ao forno a alourar.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "EMPADÃO DE CENOURA \r",
-    "image": [],
-    "author": {
+    name: "EMPADÃO DE CENOURA \r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "São"
+      name: "São"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "1 alho francês\r",
       "3 cenouras\r",
       "1/2 pimentão médio\r",
@@ -1588,180 +1696,193 @@ const recipeData = [
       "1 courgette pequena\r",
       "300 g de cogumelos\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Coze em água e sal cerca de 1 kg de cenouras. \r"
+        text: "Coze em água e sal cerca de 1 kg de cenouras. \r"
       },
       {
         "@type": "HowToStep",
-        "text": "Depois de cozidas, escorre-se a água e junta 1 caixa de natas e 2 colheres de manteiga.\r"
+        text:
+          "Depois de cozidas, escorre-se a água e junta 1 caixa de natas e 2 colheres de manteiga.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Tritura com varinha mágica.\r"
+        text: "Tritura com varinha mágica.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Adicione, peneirando e batendo, 2 colheres de sopa de farinha de trigo (não é preciso voltar ao lume).\r"
+        text:
+          "Adicione, peneirando e batendo, 2 colheres de sopa de farinha de trigo (não é preciso voltar ao lume).\r"
       },
       {
         "@type": "HowToStep",
-        "text": "molho de soja\r"
+        text: "molho de soja\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Frite o alho francês em 1 chávena de azeite e adicione o sal.\r"
+        text: "Frite o alho francês em 1 chávena de azeite e adicione o sal.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "No intervalo de 3 a 4 minutos!\r"
+        text: "No intervalo de 3 a 4 minutos!\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Acrescente os outros vegetais sem deixar juntar água. No fim acrescente o molho de soja a gosto.\r"
+        text:
+          "Acrescente os outros vegetais sem deixar juntar água. No fim acrescente o molho de soja a gosto.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Farofa: 2 chávenas de farinha + 1 colher de margarina.\r"
+        text: "Farofa: 2 chávenas de farinha + 1 colher de margarina.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Disponha num pyrex o refogado de legumes, o puré cobrindo os legumes e depois a farofa\r"
+        text:
+          "Disponha num pyrex o refogado de legumes, o puré cobrindo os legumes e depois a farofa\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Vai no forno\r"
+        text: "Vai no forno\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "ALMÔNDEGAS DE FRICASSÉ\r",
-    "image": [],
-    "author": {
+    name: "ALMÔNDEGAS DE FRICASSÉ\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [],
-    "recipeInstructions": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [],
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Tempera a carne picada com um pouco de chourico (facultativo), sal, pimenta, alho espremido, noz moscada e pão embebido en leite, 1 ovo e as claras (2) dos ovos que vai usar no fricassé. Mistura bem.\r"
+        text:
+          "Tempera a carne picada com um pouco de chourico (facultativo), sal, pimenta, alho espremido, noz moscada e pão embebido en leite, 1 ovo e as claras (2) dos ovos que vai usar no fricassé. Mistura bem.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Tendem-se as bolas e envolvem-se en farinha.\r"
+        text: "Tendem-se as bolas e envolvem-se en farinha.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Num tacho, põe-se cebola picada com azeite e refoga muito ligeiramente (tapado). \r"
+        text:
+          "Num tacho, põe-se cebola picada com azeite e refoga muito ligeiramente (tapado). \r"
       },
       {
         "@type": "HowToStep",
-        "text": "Junta 1/2 copo de vinho branco e depois água suficiente para cobrir as almondegas.\r"
+        text:
+          "Junta 1/2 copo de vinho branco e depois água suficiente para cobrir as almondegas.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Quando estiver a ferver, colocam-se as almondegas e deixa-se cozer.\r"
+        text:
+          "Quando estiver a ferver, colocam-se as almondegas e deixa-se cozer.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "A parte, bate un pouco de caldo com gemas e sumo de limão.\r"
+        text: "A parte, bate un pouco de caldo com gemas e sumo de limão.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Junta-se as almôndegas, no lume, a cozer.\r"
+        text: "Junta-se as almôndegas, no lume, a cozer.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Cobre com salsa picada.\r"
+        text: "Cobre com salsa picada.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Acompanha com arroz branco on puré de batata.\r"
+        text: "Acompanha com arroz branco on puré de batata.\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   },
   {
     "@context": "https://schema.org/",
     "@type": "Recipe",
-    "name": "MASSA PARA PIES\r",
-    "image": [],
-    "author": {
+    name: "MASSA PARA PIES\r",
+    image: [],
+    author: {
       "@type": "Person",
-      "name": "Albertina"
+      name: "Albertina"
     },
-    "datePublished": "2020-04-14",
-    "description": "",
-    "prepTime": "",
-    "cookTime": "",
-    "totalTime": "",
-    "keywords": "",
-    "recipeYield": "",
-    "recipeCategory": "",
-    "recipeCuisine": "Portuguese",
-    "nutrition": {},
-    "recipeIngredient": [
+    datePublished: "2020-04-14",
+    description: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    keywords: "",
+    recipeYield: "",
+    recipeCategory: "",
+    recipeCuisine: "Portuguese",
+    nutrition: {},
+    recipeIngredient: [
       "200g de farinha\r",
       "1 pitada de sal\r",
       "100g de gordura\r",
       "7 colheres de chá de água fria (cerca de)\r"
     ],
-    "recipeInstructions": [
+    recipeInstructions: [
       {
         "@type": "HowToStep",
-        "text": "Peneira-se a farinha com o sal para 1 tigela grande.\r"
+        text: "Peneira-se a farinha com o sal para 1 tigela grande.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Corta-se a gordura em bocadinhos e junta-se à farinha.\r"
+        text: "Corta-se a gordura em bocadinhos e junta-se à farinha.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Com as pontas dos dedos, mistura-se bem a farinha com a gordura, durante 2 - 3 minutos, até ficar com o aspecto da areia.\r"
+        text:
+          "Com as pontas dos dedos, mistura-se bem a farinha com a gordura, durante 2 - 3 minutos, até ficar com o aspecto da areia.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Junta-se a água e com 1 faca de ponta redonda, mistura-se bem até a massa começar a ficar pegajosa.\r"
+        text:
+          "Junta-se a água e com 1 faca de ponta redonda, mistura-se bem até a massa começar a ficar pegajosa.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Trabalha-se bem com a mão, durante alguns segundos, até ficar uniforme e macia.\r"
+        text:
+          "Trabalha-se bem com a mão, durante alguns segundos, até ficar uniforme e macia.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Envolve-se em papel manteiga e deixa-se descansar no frigorífico durante cerca de 15 minutos, ou envolve-se em película aderente e leva-se ao frigorífico durante 2 dias.\r"
+        text:
+          "Envolve-se em papel manteiga e deixa-se descansar no frigorífico durante cerca de 15 minutos, ou envolve-se em película aderente e leva-se ao frigorífico durante 2 dias.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Estende-se a massa sobre superfície polvilhada e corta-se segundo a receita.\r"
+        text:
+          "Estende-se a massa sobre superfície polvilhada e corta-se segundo a receita.\r"
       },
       {
         "@type": "HowToStep",
-        "text": "Forno regulado no 6 ou no 7 (?)\r"
+        text: "Forno regulado no 6 ou no 7 (?)\r"
       }
     ],
-    "aggregateRating": {},
-    "video": {}
+    aggregateRating: {},
+    video: {}
   }
 ];
-const frasesAlbertina = ["viva o pinto da costa", "isso é que é"];
+const frasesAlbertina = ["Vozes de burro não chegam ao céu", "Dentes de ouro, passados pelo cu do touro", "Quanto mais choras menos mijas", "Chupa que é cana doce", "Eu é tudo a olho, a ver se te acolho", "Estás a chorar, por um olho ervilhas, por outro maravilhas"];
 export default {
   name: "app",
   type: "",
@@ -1782,13 +1903,12 @@ export default {
         Math.floor(Math.random() * this.recipesData.length)
       ];
     },
-    getImageThumbnail(image){
-      if(image.length === 0){
-        return this.imagemAlbertina
-        } else {
-        return image[0]
+    getImageThumbnail(image) {
+      if (image.length === 0) {
+        return this.imagemAlbertina;
+      } else {
+        return image[0];
       }
-
     },
     getRandomFrase() {
       this.chosenSentence = this.frasesAlbertina[
@@ -1828,8 +1948,8 @@ export default {
       let found = false;
       for (let keys in data) {
         // search recursively
-        if (Array.isArray(data[keys]) || typeof(data[keys]) === "object"){
-          found = this.checkIfCardHasSearch(data[keys], text)
+        if (Array.isArray(data[keys]) || typeof data[keys] === "object") {
+          found = this.checkIfCardHasSearch(data[keys], text);
           if (found) {
             return true;
           }
@@ -1896,5 +2016,4 @@ export default {
   min-width: 50vw;
   max-width: 90vw;
 }
-
 </style>
